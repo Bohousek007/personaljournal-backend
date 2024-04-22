@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "42927ce0-da08-4336-800f-e61b08aad85f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34422146"
+	},
+	"item": [
+		{
+			"name": "++ Get diary + all entries by diaryId ++",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "++ Delete diary + all its entries by diaryId ++",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "List all diaries",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create new diary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"Škola\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/denik/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"denik",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Udate diary (rename)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"9db15448148c6e480fe44743403298a3\",\n    \"newName\": \"učit se naučit\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/denikEntry/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"denikEntry",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new diary entry (to diaryId)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"naučit se\",\n    \"diaryId\": \"25df72b1e5931a41ded756a21d8cfb09\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/denikEntry/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"denikEntry",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all diaryEntries",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete diaryEntry by Id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update diaryEntry (change text)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"9db15448148c6e480fe44743403298a3\",\n    \"newName\": \"učit se naučit\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/denikEntry/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"denikEntry",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
